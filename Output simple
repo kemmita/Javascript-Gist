@@ -1,0 +1,33 @@
+HTML****************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+        <style>
+            #error{
+                color: #e64545 ; 
+                font-size: 20px;
+                font-family: cursive;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+<!--we will want to display alot of datat to the screen and a simple way of doing this creating a paragraph and giving it an id and we will use that id on the JS page -->
+        <p id="error">sw</p>
+
+
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    </body>
+
+
+</html>
+JS************************************************
+
+//one we have crteated a paragraph with an id all we have to do is write the code below with the id from the paragraph we created and then set it equal to what ever you want the screen to say, this will be very usefull when dealing with for and while loops. 
+document.getElementById("error").innerHTML = ("Heir ist wie mann schrieben kann!");

@@ -1,0 +1,30 @@
+//below is a way to create a function to display our data with html and not have to write out the long code all of the time so instead of
+//going through the hasstle of line 5 all the time we can just use line 7 once the function is created.
+var age = [12, 27, 51, 45];
+function showresults(){
+    document.getElementById("mypar2").innerHTML += "<br />"+ age;
+}
+showresults(age);
+
+
+//in javascript we create the function and then call on it like we did on line 5. 
+function greeting1(){
+    window.alert("hello");
+}
+greeting1();
+
+//sometimes functions will have parameters and need to be filled when used.
+function greeting2(firstname){
+    window.alert("Hello " + firstname);
+    
+}
+greeting2("Russell");
+
+//below we create a function called sum with parameters a nd b which will be returned 
+function sum(a,b){
+    return a+b;
+}
+//in order to print sum we need to give it a new name and then print it out using wibdow.alert and placing the value within the alert parameter 
+var x = sum(3,7);
+window.alert(x);
+

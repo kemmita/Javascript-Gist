@@ -1,0 +1,30 @@
+
+html
+<div id="timeremaining">Time Remaining:<span id="realTime">30</span></div>
+html
+
+
+
+//Declare variables at the very top of the code
+var myCounter;
+var timeremanining;
+
+
+ //set start time for time box
+             timeremanining = 10;
+             document.getElementById("realTime").innerHTML = timeremanining;
+            
+ //call countdown method
+             startCountdown();
+ 
+ 
+ function startCountdown(){
+ 
+ var myCounter = setInterval(function(){
+     timeremanining -= 1;
+     document.getElementById("realTime").innerHTML = timeremanining;
+     if(timeremanining == 0){
+         clearInterval(myCounter);
+     }
+ }, 1000);
+ }

@@ -1,0 +1,10 @@
+var speed = 38;
+if (speed>70) {
+    window.alert("you are going to fast");
+}else if(speed<40){
+    window.alert("your speed is too slow.");
+}
+else{
+    window.alert("your speed is fine.")
+}
+

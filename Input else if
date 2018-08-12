@@ -1,0 +1,55 @@
+html**************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+    
+    </head>
+    
+    <body>
+
+        <p >Speed on the highway:<input id="speed" type="number"/><button onclick="checkSpeed()">Check</button></p>
+        <p>what is the current season:<input id="season" type="text"> <button ondblclick="defineSeason()">Cheack</button></p>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    
+    </body>
+
+
+</html>
+JS***************************************
+
+function checkSpeed() {
+    var speed = document.getElementById("speed").value;
+if (speed>70) {
+    window.alert("you are going to fast");
+}else if(speed<40){
+    window.alert("your speed is too slow.");
+}
+else{
+    window.alert("your speed is fine.");
+}
+
+
+}
+function defineSeason(){
+    var s = document.getElementById("season").value;
+    if(s == "winter"){
+        window.alert("Es ist sehr kalt!");
+    }
+    else if(s == "fall"){
+        window.alert("it is now wrestling season");
+    }
+    else if(s == "summer"){
+        window.alert("Let's go to the beach");
+        
+    }
+    else if(s == "spring"){
+        window.alert("it is a bit cold at the beach");
+    }
+    else{
+        window.alert("please check your spelling!");
+    }
+}

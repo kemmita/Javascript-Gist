@@ -1,0 +1,18 @@
+//we are trying to show that a prototype is not needed id we give a standard value when defining the variable from the function constructor 
+function phone(make, model, warranty, color, condition){
+    this.make = make;
+    this.model = model;
+    this.warranty = warranty;
+    this.color = color;
+    this.condition = "new";
+    this.extendwarranty = function (x){
+        this.warranty = this.warranty + x;
+    }
+}
+//notice how below when we create our new object myPhone, we declare all of the variable values within the parameter are except condition and that is becuase it has a set value above in the function.
+var myPhone = new phone("apple", "Iphone", 12, "white");
+window.console.log(myPhone);
+
+//here is another where to declare prototypes and I have yet to see why one would do this and not do what has been completed on lines 2 and 7
+phone.prototype.size = 5;
+window.console.log(myPhone.size);

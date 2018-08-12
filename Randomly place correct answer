@@ -1,0 +1,22 @@
+for(i=1; i<5; i++){//use a for loop to randomly plase correct answer into a button
+    document.getElementById("b"+i).onclick = function(){//by givivng the buttons in html the same name with and a number, we can replace 
+    the number with i from our for loop
+        
+    if(playing == true){//yes
+        if(this.innerHTML == correctAnswer){//this part will stop the looping once a button has been assigned the correct value
+        
+            
+            //increase score by 1
+            score++;
+            document.getElementById("realscore").innerHTML = score;
+           
+            
+            //Generate new Q&A
+            
+            generateQA();
+        }else{
+        
+        }
+    }
+}   
+}

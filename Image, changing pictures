@@ -1,0 +1,4 @@
+    //we could at first set it to non so it would not appear untill the functionwas run and block was called displaying the dice.
+    document.querySelector(".dice").style.display = "block";
+//we have labeled our pictures as dice-1, dice-2 etc.. by doing this we can make the correct picture appear by allowing our variable dice and its current roll value to pic our picture for us. first use dice- the number that should appear after that will be provided by dice. 
+    document.querySelector(".dice").src = "dice-" + dice + ".png";

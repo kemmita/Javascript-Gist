@@ -1,0 +1,11 @@
+
+    for(i=1; i<5; i++){
+        if(i != correctPosition) {
+            var wrongAnswer;
+            do{
+                wrongAnswer = (1+ Math.round(9*Math.random()))*(1+ Math.round(9*Math.random())); //a wrong answer
+            }while(answers.indexOf(wrongAnswer)>-1)
+            document.getElementById("b"+i).innerHTML = wrongAnswer;
+            answers.push(wrongAnswer);
+        }
+    }

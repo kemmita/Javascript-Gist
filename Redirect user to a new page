@@ -1,0 +1,11 @@
+function checkPass() {
+	var password = document.getElementById('password').value;
+    if (password == 'video'){
+//windows.location will replace the current window with the new one the user should be redirected to.
+        window.location.replace('https://www.google.com/');
+    }
+    else{
+        document.getElementById('textline').innerHTML = ('Password incorrect');
+    }
+    
+}

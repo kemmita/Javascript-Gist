@@ -1,0 +1,5 @@
+//below we create a delayed welcome message using a new variable and setting it to another JS function setTimeout we then used a window 
+alert to display the message and 3000 mila seconds as to keep the message from popping up right away, so three seconds after they arrive
+the message will pop up.
+
+var delayedWelcome = setTimeout(function(){window.alert("Welcome to our page")}, 3000);

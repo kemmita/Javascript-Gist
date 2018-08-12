@@ -1,0 +1,16 @@
+var norseWords = ["þó", "oddi", "er", "líkligr", "þrysta", "knifr"];
+var englishWords = ["thouhg", "odd", "are", "likely", "thirst", "knife"];
+var englishWords1 = ["odd", "are", "though", "likely", "thirst", "knife"];
+var englishWords2 = ["knife", "odd", "are", "thirst", "likely", "are"];
+var englishWords3 = ["are", "odd", "though", "knife", "thirst", "likely"];
+
+randno = Math.floor(Math.random() * norseWords.length);
+document.getElementById("word").innerHTML = norseWords[randno];
+randno1 = Math.floor(Math.random() * englishWords.length);
+randno2 = Math.floor(Math.random() * englishWords1.length);
+randno3 = Math.floor(Math.random() * englishWords2.length);
+randno4 = Math.floor(Math.random() * englishWords3.length);
+document.getElementById("b0").innerHTML = englishWords[randno1];
+document.getElementById("b1").innerHTML = englishWords[randno2];
+document.getElementById("b2").innerHTML = englishWords[randno3];
+document.getElementById("b3").innerHTML = englishWords[randno4];

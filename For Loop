@@ -1,0 +1,50 @@
+HTML*******************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+        <style>
+            #mypar{
+                background-color: #76bcd9 ; 
+                font-size: 20px;
+                font-family: cursive;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        
+<!--the paragraph id will be used for our innerHTML in JS-->
+       <p id="mypar">for loopy loop</p>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    </body>
+
+
+</html>
+JS*******************************************************
+//here is a fr loop that simply up the number by one each time to the screen by using = i at the end of line 3.
+for(i=0; i<10; i++){
+    document.getElementById("mypar").innerHTML += "<br />" + i;
+}
+//below is a for loop that prints the number to the scond power everytime it loops. we do this by adding  Math.pow(i,2) i represents the count in the for loop and also the number we are going off of and 2 represents the power we are rasining it to. 
+for(i=0; i<4; i++){
+    document.getElementById("mypar").innerHTML += "<br />" + Math.pow(i,2);
+}
+
+//so we finally learned how to itterate through an array using a for loop. If we look at this is is quite simple, on our html page we created a paragraph and gave it an id and by using the innerHTML keyword, all of our JS code is displayed via HTml. abd regarding the array, just simpoly create an array and then itterate through the array as you would in c++ or Java. Javascript does have .length keyword
+var shoppingList = ["bread", "milk", "cheese", "Egg", "Beef"];
+for(i=0; i<shoppingList.length; i++){
+    document.getElementById("mypar").innerHTML += "<br />" + shoppingList [i];
+}
+
+//below we utilize a array and for loop to print the numbers stored in the array to the power of 10. inside of the for loop add our array plus index += 10 and then outside of the for loop is where we are going to use a normal innerHTML to display our array to the screen
+var age = [1,2,3,4,5]
+for(i=0; i<age.length; i++){
+    age[i] += 10;    
+}
+document.getElementById("mypar").innerHTML += "<br />" + age;

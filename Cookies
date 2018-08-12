@@ -1,0 +1,41 @@
+html*************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+        <style>
+           
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        <p id="mypar"></p>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    </body>
+
+
+</html>
+
+JS***********************************************
+//document.cookie is not a variable we are simply adding data to our cookie memory the words can be anything but you muct use the equal 
+sign.
+document.cookie = "username = kemmitr";
+document.cookie = "age = 27";
+document.cookie = "country = USA";
+
+
+//this variable was need to set the value to document.cookie.split without this we would not be able itterate through the cookie data 
+with a for loop. Not that this is something that needs to be done all that often.
+var cookie = document.cookie.split("; ");
+for(i = 0; i<cookie.length; i++){
+    document.getElementById("mypar").innerHTML += "<br />" + cookie[i];
+}
+
+//the code below can work correctly when all other data from above is removed it is the way to check that the cookies you created were 
+actually stored.
+window.alert(document.cookie);

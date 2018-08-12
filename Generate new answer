@@ -1,0 +1,46 @@
+for(i=1; i<5; i++){//use a for loop to randomly plase correct answer into a button
+    document.getElementById("b"+i).onclick = function(){//by givivng the buttons in html the same name with and a number, we can replace the number with i from our for loop
+        
+    if(playing == true){//yes
+        if(this.innerHTML == correctAnswer){//this part will stop the looping once a button has been assigned the correct value
+        
+            
+            //increase score by 1
+            score++;
+            document.getElementById("realscore").innerHTML = score;
+           
+            
+            //Generate new Q&A
+            
+            generateQA();//once we have gotten the correct answer we must generate a new question
+        }else{
+        
+        }
+    }
+}   
+}
+
+
+function generateQA(){
+    var x = 1+ Math.round(9*Math.random());
+    var y = 1+ Math.round(9*Math.random());
+    correctAnswer = x*y;
+    document.getElementById("mathproblem").innerHTML = x + "x" + y;
+    var correctPosition = 1+ Math.round(3*Math.random());
+    document.getElementById("b"+correctPosition).innerHTML = correctAnswer; //fill one box with the correct answer
+    
+    //fill other boxes with wrong answers
+    
+    var answers = [correctAnswer];
+    
+    for(i=1; i<5; i++){
+        if(i != correctPosition) {
+            var wrongAnswer;
+            do{
+                wrongAnswer = (1+ Math.round(9*Math.random()))*(1+ Math.round(9*Math.random())); //a wrong answer
+            }while(answers.indexOf(wrongAnswer)>-1)
+            document.getElementById("b"+i).innerHTML = wrongAnswer;
+            answers.push(wrongAnswer);
+        }
+    }
+}

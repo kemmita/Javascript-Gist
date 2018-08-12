@@ -1,0 +1,10 @@
+//here we are using a functions constructor to declare variables and initialize them within the body.
+function phone(make, model, warranty, color){
+    this.make = make;
+    this.model = model;
+    this.warranty = warranty;
+    this.color = color;
+}
+//below we create a new object called myPhone wchich we have created from the phone function. and from the phone functions constructor, we set the values. 
+var myPhone = new phone("apple", "Iphone 5", 12,  "white");
+window.console.log(myPhone);

@@ -1,0 +1,44 @@
+html***********************************
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JS Basic</title>
+        <link rel="stylesheet" href="styling.css">
+    
+    </head>
+    
+    <body>
+      <p>Please Enter Age:<input id="age"><button onclick="calcAge()">Submit</button></p>
+        <p id="mypar"></p>
+        <script type="text/javascript" src="code.js"></script>
+    
+    </body>
+
+</html>
+JS*******************************************
+
+function calcAge() {
+ var age = document.getElementById("age").value;
+     if(age < 3){
+        document.getElementById("mypar").innerHTML = ("Categorize as infant");
+    }
+    else if (age >= 3 && age <6){
+        document.getElementById("mypar").innerHTML = ("Categorize as toddler");
+    }
+    else if (age >= 6 && age == 12){
+        document.getElementById("mypar").innerHTML = ("Categorize as Child");
+    }
+    else if (age >= 13 && age < 18){
+        document.getElementById("mypar").innerHTML = ("Categorize as Teenager");
+    }
+    else if (age >= 18 && age < 60){
+        document.getElementById("mypar").innerHTML = ("Categorize as Adult");
+    }
+    else if (age >= 60){
+        document.getElementById("mypar").innerHTML = ("Categorize as Senior");
+    }
+             
+             
+    
+}

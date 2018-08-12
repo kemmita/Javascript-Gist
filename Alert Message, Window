@@ -1,0 +1,23 @@
+HTML*************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Alert Message</title>
+        
+    </head>
+    
+<!-- as we know, CSS pages will be declared in the head, but js pages will b e declared in the body. inside of the body we will use the script tags and use type text/javascript and then refrence the folder and file for the javascript page. you will need to create an additonal folder for javascript to keep our files sepreate from the html or css files.   -->
+    <body>
+        <script type="text/javascript" src="js/code.js">
+            
+        </script>
+    
+    </body>
+
+
+
+</html>
+JS***************************************
+//window is our method and alert is a function of that method 
+window.alert("Welcome to javascript");

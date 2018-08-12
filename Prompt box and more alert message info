@@ -1,0 +1,17 @@
+//he we create a variable and set it to window.confirm, this JS function will make the user select yes or no and before they are asked that
+you can create a message to tell them what they are agrreeing to. we will then use anormal window.alert with our variable in the parameter 
+are. we then create an if statement for if they choose yes or no with messages for both cinarios.
+var acceptCookies = window.confirm("Please confirm you accept cookies!");
+window.alert(acceptCookies);
+if(acceptCookies == true){
+    window.alert("Thank you for your confirmation");
+}
+else{
+    window.alert("You better accept my cookies!");
+}
+//below we will be using prompt and this is different then allert or confirm as the use must enter data into the box that will be popping 
+up. first create a variable and set it to prompt and ikside of the parameter area of the prompt place your message. what ever the user 
+types in the box will be then stored intp the variable we created we can then create a custom alert message using the data they entered. 
+See the code below for reference.
+var visitor = prompt("please enter your name");
+window.alert("Hi " + visitor + " , have fun on the page and please remember to like us on Facebook!")

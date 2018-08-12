@@ -1,0 +1,44 @@
+HTML*******************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+    
+    </head>
+    
+    <body>
+        
+<!--make sure the input tag has an id so we can refrence that in JS and like always create a button and set it to onclick and set onclick to the name of the JS function we will be creating-->
+       <p>Enter Current Season:<input id="season"/><button onclick="cheackSeason()">Check</button></p>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    </body>
+
+
+</html>
+JS****************************************
+//we reference the input tag like usual and accept the value but in addition to thta, when we our dealing with strings and not numbers,
+some individuals are bound to use upper case and that is why one should allways place .toLowerCase() after value.
+function cheackSeason() {
+     var s = document.getElementById("season").value.toLowerCase();
+    switch (s){
+        case "summer":
+            window.alert("it is summer time!");
+            break;
+        case "winter":
+            window.alert("it is winter time!");
+            break;
+        case "fall":
+            window.alert("it is currently fall");
+            break;
+        case "spring":
+            window.alert("it is spring break!");
+            break;
+        default:
+            window.alert("something is not quite right please check spelling and try again");
+            
+            
+    }
+}

@@ -1,0 +1,39 @@
+HTML*****************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+        <style>
+
+            #error{
+                color: #e64545 ; 
+                font-size: 20px;
+                font-family: sans-serif;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+<!--below we create a paragraph and set it to o. and give it the id of counter we then created a paragraph with a nested button and set it 
+to onclick. we then set onclick to a JS function "clearInterval" this predifined function stops the numbers from climbing. inside of the 
+clear interval parameter are will be placed a variable from our JS page "myCounter" this is the variable that actually initiates the 
+interval so it must be place within clearInterval if the numbers are to stop climbing.-->
+        <p id="counter">0</p>
+        <p><button onclick="clearInterval(myCounter)">Stop Counting</button></p>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    </body>
+
+
+</html>
+JS*******************************************
+//we set a new variable counter to our html paragraph counter. we then set a variable x to 0 so our counter knows where to start from. And 
+like I stated before, myCounter variable is set to setInterval. inside of the setInterval parameter area, notice the word function, 
+without this, we would not be able to use the onclick method in html. we then set x to increment by 1 every second or 1000 milaseconds.
+var counter = document.getElementById("counter");
+var x = 0;
+var myCounter = setInterval(function(){x++; counter.innerHTML = x},1000 );

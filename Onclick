@@ -1,0 +1,3 @@
+document.getElementById("startb").onclick = function(){}//this is the way to do onclick in JS
+
+<button onclick functionnamegoeshere()></button>//this is the way to do onclick in html

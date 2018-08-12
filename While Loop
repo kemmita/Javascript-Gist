@@ -1,0 +1,40 @@
+html***********************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+        <style>
+            #balpar{
+                background-color: #76bcd9 ; 
+                font-size: 20px;
+                font-family: cursive;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        
+<!--the paragraph id will be used for our innerHTML in JS-->
+       <p id="mypar">for loopy loop</p>
+        <P id="balpar">Current Balance is: $1000</P>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    </body>
+
+
+</html>
+JS**********************************
+//while loop is just like a for loop but instead we need to declare i before hand and need to increment what ever we are doning at the end 
+but before the closing of the while loop. As we can see "document.getElementById("mypar").innerHTML" is starting to look like the JS 
+version of cout<<
+var i = 0;
+var name = ["Russell"];
+while(i<5){
+document.getElementById("mypar").innerHTML += "<br/>" + "ID: " + i + " Name: " + name;
+i++;
+
+}

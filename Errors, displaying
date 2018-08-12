@@ -1,0 +1,41 @@
+html***********************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+        <style>
+/*to make the error message look a little better, we set the letter color to red.*/
+            #error{
+                color: #e64545 ; 
+                font-size: 20px;
+                font-family: sans-serif;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+<!--we would like our webpages to display to the user exactly what error has occured, and this can be done by dedicating a paragrpah to 
+this simple give the paragraph an id and leave it blank so it is only visible when an error has occured.-->
+        <p id="error"></p>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    </body>
+
+
+</html>
+
+JS*************************************
+//we use a try catch method to display the error message. we will for sure get an error for line 3 as none of the numbers have been 
+given a value so no sum can be defined.
+try{
+    sum(3,4);
+}
+//we need to set the catch block to err then we simple set our page to print by referencing our paragraph id and then setting it equal 
+to err.message which is a predifned function created by JS and will display the exact error that has occured.
+catch(err){
+document.getElementById("error").innerHTML = err.message;
+}

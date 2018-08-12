@@ -1,0 +1,51 @@
+//below we create an array and inside of the array can be mixed datatypes. now if you wanted to print the data stored within the array, 
+you could create a paragraph or something else and then assign the name of the array to the paragraph id using the innerHTML keyword.
+var shoppingList1 = ["bread", "milk", "cheese"];
+document.getElementById("mypar1").innerHTML = shoppingList1;
+
+//below we create an array of numbers and we would like it to appear as ages, so wee need to place the word "Age" on the top and have 
+our array print below. to do this simply place += "<br />"+ between innerHTML and the name of the array
+var age = [12, 27, 51, 45];
+document.getElementById("mypar2").innerHTML += "<br />"+ age;
+
+//below is how you display a single element of the array we create a function showresults that holds a parameter for on piece of data 
+from the array.
+var age = [12, 27, 51, 45];
+function showresults(x){
+    document.getElementById("mypar2").innerHTML += "<br />"+ x;
+}
+
+//now we call on the function from above and within the parameter list we place the name of our aray along with square brackets and the 
+place value we with to print, this is what x was above in our function.
+showresults(age[2]);
+
+//below we alter an array which is the same as in all langues.
+age[1] = 15;
+
+//the show results functionc is handy and should be created even without a parameter so we can print arrays and other variables with 
+such ease as shown below.
+showresults(age);
+
+//below is how we delete an item form an array. Use they keyword splice and then supply the paraemter with the placeholder number of 
+the item you want to delete and then add a comma with the number 1 which represents how many items you want to delete 
+from that specific place holder.
+shoppingList1.splice(0,1);
+showresults(shoppingList1);
+
+//here we our adding an item to the list so use array name followed by the keyword splice again and then within the parameter area 
+declare the place holder you want to add to and the second number you add will be 0 as you are adding data here, not deleting after 
+that you can add as many pieces of data that you see fit!
+shoppingList1.splice(0,0,"juice","cereal");
+showresults(shoppingList1);
+
+//below is how you display an array in chronilogical and alphabetical order
+age.sort();
+shoppingList1.sort();
+showresults(age);
+showresults(shoppingList1);
+
+//below is how you display an array in reverse chronilogical and alphabetical order
+age.reverse();
+shoppingList1.reverse();
+showresults(age);
+showresults(shoppingList1); 

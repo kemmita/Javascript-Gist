@@ -1,0 +1,16 @@
+function greeting1(){
+    window.alert("hello");
+}
+//below is an object and they object can have endless atributes if needed. Notice how comas are used instead of colons at the end of the 
+variables decleration.
+var myPhone = {
+    make : "Apple",
+    model : "Iphone 4",
+    warranty: 12,
+    color: "white"
+};
+//below is how you print the object in different ways and below also shows you how to delete attributes from the object.
+window.console.log(myPhone);
+delete myPhone.warranty;
+window.console.log(myPhone);
+window.console.log(myPhone.model);

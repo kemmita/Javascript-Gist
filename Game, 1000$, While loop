@@ -1,0 +1,52 @@
+HTML******************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+        <style>
+            #balpar{
+                background-color: #76bc44 ; 
+                font-size: 20px;
+                font-family: cursive;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+<!--created a button to intiate spending and have used the onclick method with our function from JS.-->
+        <button onclick="startGame()">Start Spending</button>     
+<!--we had to create a div below as it is against the rules to nest a paragraph inside of another paragraph and in the JS code, and 
+additional paragraph will be needed.-->
+        <div id="balpar">Current Balance is: $1000</div>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    </body>
+
+
+</html>
+JS*******************************************
+//below we will be setting up an account that will buy items untill the balance has hit 0. balance wilol begin at 1000 and items bought 
+will begin at 0. the while loop will have us buying items untill our balance hits 0. On line 5 we need to create a new variable called 
+itemPrice have it set to math.floor and then within the parameters of floor set math.random and times it by 100 as random numbers in JS 
+tend to be quite small that is the only reasoning behind multipling by 100. then we will need to create an if statement that checks if 
+itemPrice is less then or equal to balance, if so that means we have the funds and the next line of code will add and item to our list 
+the next line of code minuses the random ammount of that item from our balance and then we have a simple print statement but inside of 
+the print staement we create an additional html paragraph, see lines 9 through 10 for reference. we place all of our code inside of a 
+function so we can initate the code when a button is pushed. the function name will be used for onclick method inside of button.
+function startGame(){
+var balance = 1000;
+var itemsBought = 0;
+while(balance>0){
+    var itemPrice = Math.floor(Math.random()*100);
+    if(itemPrice <= balance){
+        itemsBought += 1;
+        balance -= itemPrice;
+        document.getElementById("balpar").innerHTML += "<p> Purchase ammount: $" + itemPrice + ". New Balance: " + balance +". <p />";
+    }
+}
+    document.getElementById("balpar").innerHTML += "<p>Items purchased:" + itemsBought +"<p/>"
+}

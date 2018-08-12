@@ -1,0 +1,21 @@
+for(i=1; i<5; i++){
+    document.getElementById("b"+i).onclick = function(){
+    //check if we are playing     
+    if(playing == true){//yes
+        if(this.innerHTML == correctAnswer){
+        //correct answer
+            
+            //increase score by 1
+            score++;
+            document.getElementById("realscore").innerHTML = score;
+           
+            
+            //Generate new Q&A
+            
+            generateQA();
+        }else{
+        
+        }
+    }
+}   
+}

@@ -1,0 +1,14 @@
+window.alert("Welcome to Javascript");
+//there seem to be no need to declare datatypes in javascript
+var x = 3;
+var y = 45;
+//window.console.log is how we write to the console.
+window.console.log(x);
+var z = x + y;
+window.console.log("the value of z is " + z);
+var a = ("chinese");
+window.console.log(a);
+window.console.log("the data type of a is " + typeof (a));
+//check is javascripts word for boolean
+var check = (x == 3);
+window.console.log("the value of check is " + check);

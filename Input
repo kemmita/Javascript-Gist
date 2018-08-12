@@ -1,0 +1,40 @@
+HTML*****************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+    
+    </head>
+    
+    <body>
+<!--we only needed to create a paragraph becuase we need one to use input tags make sure to use the correct type for input as you can see 
+below we used number as we are chgecking for speed limits here. and then perhaps the most important part, the button was nested within the 
+paragraph tags after the input tags. inside the first button tag use the onclick html method and then place the name of the function we 
+created in our JS file within the parenthesees. So when the button is clicked, the function will execute.-->
+        <p >Speed on the highway:<input id="speed" type="number"/><button onclick="checkSpeed()">Check</button></p>
+        <script type="text/javascript" src="code.js">
+        </script>
+    
+    
+    </body>
+
+
+</html>
+
+JS**********************************************
+//first thing to do is to create a function and we named it checkSpeed we then created a variable speed and we will obtain this speed 
+from an input tag we created on our html page and gave it the id speed after speed write .value
+function checkSpeed() {
+    var speed = document.getElementById("speed").value;
+if (speed>70) {
+    window.alert("you are going to fast");
+}else if(speed<40){
+    window.alert("your speed is too slow.");
+}
+else{
+    window.alert("your speed is fine.")
+}
+
+
+}

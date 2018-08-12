@@ -1,0 +1,30 @@
+html******************************************
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Buttons</title>
+    
+    </head>
+
+    <body>
+        <p>javascript</p>
+<!--notice how all of the elements we will customize with JS must be placed above the script tags.-->
+        <button id="button">click me.</button>
+        <script type="text/javascript"  src="code.js">
+        </script>
+    </body>
+
+</html>
+JS*********************************************
+//window is our method and alert is a function of that method 
+window.alert("Welcome to Javascript"); {
+    
+}
+
+//using the keyword getElementById, we grab the id we created in button and then set it to onclick and once it is click an alert function 
+will execute displaying what we have written below.
+
+document.getElementById("button").onclick = function () {
+                alert("you have just clicked me");
+            }

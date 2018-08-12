@@ -1,0 +1,17 @@
+//below on line 7 we are creating a function within a function. we call it extendedwarranty and set it egualt to warinty warinty + x and x will be determined online 16 when the function is called.
+function phone(make, model, warranty, color){
+    this.make = make;
+    this.model = model;
+    this.warranty = warranty;
+    this.color = color;
+    this.extendwarranty = function (x){
+        this.warranty = this.warranty + x;
+    }
+}
+
+
+var myPhone = new phone("apple", "Iphone", 12, "white");
+window.console.log(myPhone);
+// we invoke the extendwarranty method below and give it a value of 24 we then display that by printing myPhone.warranty we call .warranty and not extendwarranty because on line 8 extned warranty number wil be added to warranty and we want the total so we must call on warranty.
+myPhone.extendwarranty(24);
+window.console.log(myPhone.warranty);

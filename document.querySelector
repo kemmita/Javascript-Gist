@@ -1,0 +1,9 @@
+var scores = [0, 0];//this will be score for both players
+var roundScore = 0;
+//we will set this from 0 to 1 to access player 1 and 2 if we wana access player 1, leave it at 0.
+var activePLayer = 0;
+
+//Genreate random numbers for the dics and using floor to round the numbers to a whole int and *6 so we will only roll numbers between 0 and 5. but we need to get to 6, so we add +1 to the end.
+var dice = Math.floor(Math.random() * 6) + 1;
+//use css style to access html items
+document.querySelector("#current-"  + activePLayer).textContent = dice;
