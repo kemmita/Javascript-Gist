@@ -1,5 +1,6 @@
-1. variables can be declared using var or let, although let is best practice. You can also use const for variables that will have no 
-value changed in the future.
+1. variables can be declared using var or let, let is for local variables and var is for global variables. You can also use 
+const for variables that will have no value changed in the future.
+
 let name = 'Russell Kemmit';
 var bName = 'Jane Kemmit';
 const bDay = '11/11/1982';
