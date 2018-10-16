@@ -1,0 +1,15 @@
+1. Below is the old way of creating a function, it still works, but is not best practice.
+function poop(){
+  console.log('space poop');
+}
+2. Below is the new way of creating a method!
+let greatUser = function(){
+  console.log('Welcome dude');
+}
+let square = function(number){
+    number = number * number;
+    console.log(number);
+}
+square(3);
+greatUser();
+poop();
