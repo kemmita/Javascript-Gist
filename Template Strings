@@ -1,0 +1,5 @@
+1. Template strings allow you to concantenate much easier, simply use back tics.
+
+let name = 'Russell';
+let gender = 'Male';
+console.log(`My name is ${name} and I am a ${gender}`);
