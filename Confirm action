@@ -1,0 +1,12 @@
+1. We can wrap our js code in a confirm block. This way the user will have to confirm they want to perform the action before it happens.
+
+   if (confirm("are you sure you want to remove this?!")) {
+                $.ajax({
+                    url: 'process.php',
+                    type: 'POST',
+                    data: {id: id, deleteCar: deleteCar},
+                    success: function () {
+                        $('.title-input').val("");
+                    }
+                });
+            }
