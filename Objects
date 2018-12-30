@@ -5,3 +5,19 @@ let myBook = {
 }
 
 console.log(myBook.genre);
+
+
+//using an object ina function
+
+let myBook = {
+  name: 'Vikings',
+  date: 1987,
+  genre: 'History'
+}
+
+let book = function(b){
+    console.log(b.name);
+}
+
+book(myBook);
+
