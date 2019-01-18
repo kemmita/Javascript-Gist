@@ -1,0 +1,71 @@
+1. HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="indigo">
+<header class="indigo darken-1 section">
+    <h2 class="center white-text">Programmierverwendung</h2>
+    <p class="flow-text grey-text center text-lighten-2">
+        wöchentliche Programmierung</p>
+</header>
+<div class="container section">
+    <div class="row">
+        <div class="col s12 m6">
+            <form class="card z-depth-0">
+                <div class="card-content">
+                <span class="card-title indigo-text">Add Item:</span>
+                <div class="input-field">
+                    <input type="text" id="name">
+                    <label for="name">Technology Language:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="hours">
+                    <label for="hours">Hours:</label>
+                </div>
+                <div class="input-field center">
+                    <button class="btn-large pink white-text">Add Item</button>
+                </div>
+                <div class="input-field center">
+                    <p class="red-text" id="error"></p>
+                </div>
+                </div>
+            </form>
+        </div>
+        <div class="col s12 m6 push-m1">
+            <div class="canvas"></div>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
+
+
+2. JS
+
+const form = document.querySelector('form');
+const name = document.querySelector('#name');
+const hours = document.querySelector('#hours');
+const error = document.querySelector('#error');
+
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+
+    if (name.value && hours.value){
+        const item = {
+            name: name.value,
+            hours: parseInt(hours.value)
+        };
+        db.collection('programming-tech').add(item).then(res => {
+            name.value = '';
+            hours.value = '';
+        });
+    }else{
+        error.innerHTML = 'Bitte geben Sie die erforderlichen Daten an';
+    }
+
+});
