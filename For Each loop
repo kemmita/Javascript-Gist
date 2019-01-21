@@ -1,0 +1,7 @@
+1. The foreach loop has different syntax then the majority of foreach loops out there.
+
+const notes = ['Note 1', 'Note 2', 'Note 3'];
+
+notes.forEach(element => {
+  console.log(element);
+});
