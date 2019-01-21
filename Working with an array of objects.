@@ -1,0 +1,59 @@
+1. Simply create multiple objects in the array.
+
+const notes = [
+  {
+    title: 'Note 1', 
+    body: 'This is note one.'
+      }, 
+  {
+    title: 'Note 2', 
+    body: 'This is note two'
+  },
+  {
+    title: 'Note 3', 
+    body: 'this is note three'
+  },
+];
+
+
+2. Itterate throgh an array of objects.
+notes.forEach(element => {
+  // Below we use dot notation to print a specific element of the object.
+  console.log(element.body);
+});
+
+
+3. Search through an array of objects
+
+
+const notes = [
+  {
+    title: 'Note 1', 
+    body: 'This is note one.'
+      }, 
+  {
+    title: 'Note 2', 
+    body: 'This is note two'
+  },
+  {
+    title: 'Note 3', 
+    body: 'this is note three'
+  },
+];
+
+
+//this will return the index of the object if found.
+const index = notes.findIndex(function (note, index){
+    return note.title === 'Note 3';
+});
+
+//use the splice method to delete the object. we could also provide a third param and replace the object with a new one.
+notes.splice(index, 1);
+
+
+notes.forEach(element => {
+  // Below we use dot notation to print a specific element of the object.
+  console.log(`The title is ${element.title} and the body is ${element.body}`);
+});
+
+
