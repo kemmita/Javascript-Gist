@@ -1,0 +1,6 @@
+1. To use string iterpolation, use back ticks.
+
+let name = 'Russell';
+
+console.log(`My name is ${name}.`); 
+
