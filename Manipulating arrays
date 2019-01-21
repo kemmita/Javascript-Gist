@@ -1,0 +1,22 @@
+1. Add item to array.
+
+const notes = ['Note 1', 'Note 2', 'Note 3'];
+
+//push will add an item to an array.
+notes.push('Note 4');
+
+2. Remove item from array, we will use splice, we will need to proviude the index of the item along with how many we want to remove. 
+
+//We are removing 1 item from the array at index 0
+notes.splice(0, 1);
+
+3. We can also use splice to replace an item in an array with a new item.
+
+const notes = ['Note 1', 'Note 2', 'Note 3'];
+
+//This will rtemove the first item of the array and add a new one.
+notes.splice(0, 1, 'New Note 1');
+
+notes.forEach(element => {
+  console.log(element);
+});
