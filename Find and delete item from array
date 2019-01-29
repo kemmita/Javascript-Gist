@@ -1,0 +1,33 @@
+const todos = [
+    {
+        text: 'Note 1',
+        completed: true,
+    },
+    {
+        text: 'Note 2',
+        completed: true,
+    },
+    {
+        text: 'Note 3',
+        completed: false,
+    },
+    {
+        text: 'Note 4',
+        completed: true,
+    },
+    {
+        text: 'Note 5',
+        completed: false,
+    },
+];
+
+const deleteTodo = (todos) =>{
+    const todo = todos.findIndex(function (todos) {
+        return todos.text === 'Note 4' && todos.completed === true;
+    });
+    todos.pop(todo);
+};
+deleteTodo(todos);
+todos.forEach(element => {
+    console.log(element);
+});
