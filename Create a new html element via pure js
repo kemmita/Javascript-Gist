@@ -1,0 +1,11 @@
+1. First we will use the createElement function to create an html element 
+
+const neuP = document.createElement('p');
+
+2. Next we will need to apply some value to this p or less it will sit empty.
+
+neuP.textContent = 'This is a new note from the js script';
+
+3. Lastly we need need to use the appendChild method and append it to an exisitng html element 
+
+document.querySelector('body').appendChild(neuP);
