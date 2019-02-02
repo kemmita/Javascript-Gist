@@ -1,0 +1,13 @@
+1. Remove all of the p within the dom
+
+HTML
+  <p>This application was created by Russell Kemmit</p>
+  <p>This application was created by Russell Kemmit</p>
+  <p>This application was created by Russell Kemmit</p>
+
+JS
+var ps = document.querySelectorAll('p');
+
+ps.forEach(element => {
+  element.remove();
+});
