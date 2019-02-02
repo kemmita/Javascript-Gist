@@ -1,0 +1,16 @@
+1. HTML
+ <p>Thing 1</p>
+  <p>Thing 2</p>
+  <p>Thing 3</p>
+  <p>Thing 4</p>
+  <p>Thing 5</p>
+  
+2.JS
+let paras = document.querySelectorAll('p');
+
+paras.forEach(p => {
+    if(p.textContent.includes('T')){
+      p.remove();
+    }
+});
+  
