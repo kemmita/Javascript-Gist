@@ -1,0 +1,5 @@
+1. To remove the element from the dom, we will use query selector to obtain the element and then use the .remove() js funciton
+
+<p>This application was created by Russell Kemmit</p>
+
+document.querySelector('p').remove();
