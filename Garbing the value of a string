@@ -1,0 +1,14 @@
+1. HTML
+
+  <p>This application was created by Russell Kemmit</p>
+  <p>This application was created by Russell Kemmit</p>
+  <p>This application was created by Russell Kemmit</p>
+  
+
+2. JS
+
+var ps = document.querySelectorAll('p');
+
+ps.forEach(element => {
+  console.log(element.textContent);
+});
