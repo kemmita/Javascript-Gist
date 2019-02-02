@@ -1,0 +1,22 @@
+
+const notes = [
+  {
+      title: 'Note 1',
+      body: 'This is note one.'
+  },
+  {
+    title: 'Note 2',
+    body: 'This is note two.'
+  },
+  {
+    title: 'Note 3',
+    body: 'This is note three.'
+  }
+]
+
+
+notes.forEach(note => {
+    const neuP = document.createElement('p');
+    neuP.textContent = note.body;
+    document.querySelector('body').appendChild(neuP); 
+});
