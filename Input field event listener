@@ -1,0 +1,6 @@
+ <input id="todo-text" type="text" placeholder="Add ToDo">
+ 
+ // this event will listen and return each keystroke in real time.
+ document.querySelector('#todo-text').addEventListener('input', (e) => {
+        console.log(e.target.value);
+});
