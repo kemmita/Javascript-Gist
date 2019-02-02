@@ -1,0 +1,8 @@
+  <button>Add New Todo</button>
+  
+  // There are several different eveents that we can listen for, for example we can listen for a click or we can listen for a hover, keyup etc..
+  // When thet event fires we will use an anonymous function to run at the time of the event, below we change the text value of the btn
+  // we utuilize the element returned, btu this could have been completed utilizing document.getelementbyid('button').innerhtml = 'example'
+document.querySelector('button').addEventListener('click', (e) => {
+        e.target.textContent = 'Todo Added!';
+});
