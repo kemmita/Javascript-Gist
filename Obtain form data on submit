@@ -1,0 +1,19 @@
+1. We will create a form and then disable the defauly functionlity from the submmit action within the dom, this will be done in out js.
+
+HTML 
+<form id="name-form">
+            <input type="text" placeholder="First name" name="firstName">
+            <button>Submit</button>
+</form>
+
+JS
+
+//using the event listner submit we will obtain the data submitted from tbe form. If we want to disable the page from reloading we will need
+o use the element returned from the event and use the js function preventDefault. After we have prevented the reload we will need to use 
+"e.target.elements" to target the input field id driectly and then use the js function value to grab the data.
+document.querySelector('#name-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log(e.target.elements.firstName.value);
+});
+        
+        
