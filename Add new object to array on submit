@@ -1,0 +1,23 @@
+1. HTML
+<body>
+        <h1>Todos</h1>
+        <input id="search-text" type="text" placeholder="Filter todos">
+        <div id="todos"></div>
+        <form id="todo-form">
+            <input type="text" id="todoInput" name="todoInput" placeholder="Buy stuff...">
+            <button>Submit</button>
+        </form>
+        <script src="todo-app.js"></script>
+    </body>
+    
+2. JS
+
+document.querySelector('#todo-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    todos.push({
+        text: e.target.elements.todoInput.value,
+        completed: false
+    });
+    e.target.elements.todoInput.value = '';
+    renderTodos(todos, filters);
+});
