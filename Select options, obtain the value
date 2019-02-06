@@ -1,0 +1,14 @@
+1. Html   
+
+<select name="filter-by" id="filter-by">
+            <option value="byEdited">Sort by last edited</option>
+            <option value="byCreated">Sort by created</option>
+            <option value="alphabetical">Sort by alphabetical</option>
+</select>
+
+2. Js
+
+document.querySelector('#filter-by').addEventListener('change', (e) => {
+    let a = e.target.value;
+    console.log(a);
+});
