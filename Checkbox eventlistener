@@ -1,0 +1,8 @@
+1. HTML
+<label for="check"><input type="checkbox" name="check" id="check">Hide Completed</label>
+
+2.Js
+document.querySelector('#check').addEventListener('change', (e) => {
+    filters.hideCompleted = e.target.checked;
+    renderTodos(todos, filters);
+});
