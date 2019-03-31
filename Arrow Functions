@@ -1,0 +1,7 @@
+const square = (num) => {
+    return num * num;
+};
+console.log(square(4));
+//This is the short hand version of the arrow function above.
+const squareTwo = (num) => num * num;
+console.log(squareTwo(3));
