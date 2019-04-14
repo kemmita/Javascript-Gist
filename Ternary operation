@@ -1,0 +1,5 @@
+const age = 33;
+
+const age_test = age >= 18 ? 'You can buy smokes :) !' : 'Go find someone to buy you smokes :( !';
+
+console.log(age_test);
