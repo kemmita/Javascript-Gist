@@ -1,0 +1,15 @@
+1.undefined means a variable has been declared but has not yet been assigned a value. On the other hand, null 
+is an assignment value. It can be assigned to a variable as a representation of no value.
+
+
+// We would not be  able to use null for the if statement below as we have declared the variable, but hva enot assigned it a value.
+
+const products = [];
+const product = products[0];
+
+
+if(product === undefined){
+    console.log('nothing there');
+}else{
+    console.log(`${product} was found.`);
+}
