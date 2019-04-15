@@ -1,0 +1,11 @@
+1. We can use typeof to get a string representation of an object, var, etc...
+
+a = 123;
+
+console.log(typeof a);
+
+2. We can use a string to check the datatype
+
+if (typeof a === "number"){
+    console.log('Datatype is a number!');
+}
