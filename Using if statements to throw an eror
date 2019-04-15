@@ -1,0 +1,11 @@
+const getTip = (amount) => {
+    if (typeof amount !== "number"){
+        // By using throw and the function error, we can display a realworld error in the command line.
+        throw Error('A number value was not provided, please try again.');
+    }else{
+        return amount *.25;
+    }
+};
+
+const result = getTip(true);
+console.log(result);
