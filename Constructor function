@@ -1,0 +1,11 @@
+1. Constrcutor functions can be used as dynamic options
+
+const User = function (userName, email) {
+   this.username = userName;
+   this.email = email;
+};
+
+
+const userone = new User('kemmitr', 'kemmitr@yahoo.com');
+
+console.log(`Welcome ${userone.username} we have your email recorded as ${userone.email}`);
