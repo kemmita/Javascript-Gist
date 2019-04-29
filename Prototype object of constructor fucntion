@@ -1,0 +1,41 @@
+1. Beofre classes were implemented into JS, constrcutor functions were used along with prototype methods. This is basically the same
+as creating a class and assigning functions to that class.
+
+const User = function (userName, email = null) {
+    this.username = userName;
+    this.email = email;
+};
+
+User.prototype.getBio = function () {
+  return `${this.username} has their email registered as ${this.email}`;
+};
+
+const userone = new User('kemmitr', 'kemmitr@yahoo.com');
+const usertwo = new User('kemmita', 'kemmita@yahoo.com');
+console.log(userone.getBio());
+console.log(usertwo.getBio());
+
+2. Now we will create the setter functions that are 100% optional.
+
+const User = function (userName, email = null) {
+    this.username = userName;
+    this.email = email;
+};
+
+User.prototype.getBio = function () {
+  return `${this.username} has their email registered as ${this.email}`;
+};
+
+//below we create the setters 
+User.prototype.setName = function (userName) {
+    this.username = userName;
+};
+User.prototype.setEmail = function (email) {
+    this.email = email;
+};
+//We first create an instance of the constructor functions and then utilize the setters to set the fields. as
+you can see the params in the constructor are optional.
+const userthree = new User();
+userthree.setEmail('testemail@test.com');
+userthree.setName('testname');
+console.log(userthree.getBio());
