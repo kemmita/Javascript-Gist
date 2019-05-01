@@ -1,0 +1,5 @@
+let word = 'Rusty'
+word = word.toLowerCase().split('');
+word.forEach(function (letter) {
+    console.log(letter);
+});
