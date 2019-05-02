@@ -1,0 +1,18 @@
+class UserClass {
+    constructor(username, email){
+        this.username = username;
+        this.email = email;
+    }
+
+    getBio(){
+        return `${this.username} has their email registered as ${this.email}`;
+    }
+
+    setName(username){
+        return this.username = username;
+    }
+}
+
+const userclass = new UserClass('Russell', 'rdog@gmail.com');
+console.log(userclass.setName('russell'));
+console.log(userclass.getBio());
