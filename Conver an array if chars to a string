@@ -1,0 +1,2 @@
+let word = ['R', 'U', 'N'];
+word.join('');
