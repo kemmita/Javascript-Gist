@@ -1,0 +1,17 @@
+1. we are unable to declare a variable in a class like we would do in c or Java for example
+int x;
+string name;
+therefore we need to create getters and setters without making a declartion in the class like below
+
+class data{
+    // location variable of class data
+    get location (){
+        return this._location;
+    }
+    set location (value){
+        return this._location = value;
+    }
+}
+
+data.location = "St Paul";
+console.log(data.location);
