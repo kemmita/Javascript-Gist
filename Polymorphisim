@@ -1,0 +1,30 @@
+1. Parent class
+
+class UserClass {
+    constructor(username, email){
+        this.username = username;
+        this.email = email;
+    }
+
+    getBio(){
+        return `${this.username} has their email registered as ${this.email}`;
+    }
+}
+
+2. Child class
+
+//use extends to use inheritance
+class Employee extends UserClass{
+    constructor(username, email, salary, position){
+        super(username, email);
+        this.salary = salary;
+        this.position = position;
+    }
+    //simply change the body of the method to override it from the parent.
+    getBio() {
+        return `${this.username} works as a ${this.position}`;
+    }
+}
+
+const emp = new Employee('jkemmit', 'jk@yahoo.com', 12.44, 'cAagier');
+console.log(emp.getBio());
