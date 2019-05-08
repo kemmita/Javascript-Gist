@@ -1,0 +1,29 @@
+1. Creating a promise is just like creating any other function in js, but with promises we can react depending on the data returned.
+
+//Create the promise using the promise functions from js, we will need to pass resolve and reject so we can send back a reply or
+an error depending on the situation.
+const getPuzzle = (wordCount) => new Promise((resolve, reject) =>{
+    const request = new XMLHttpRequest();
+    request.open('GET', `http://puzzle.mead.io/puzzle?wordCount=${wordCount}`);
+    request.send();
+    request.addEventListener('readystatechange', (e) => {
+        //4 = done the http request is finished.
+        if (e.target.readyState === 4 && e.target.status === 200) {
+            const data = JSON.parse(e.target.responseText);
+            resolve(data.puzzle);
+        } else if (e.target.readyState === 4) {
+            reject('An Error has occurred!');
+        }
+    });
+});
+
+
+2. Now we will call on the function above.
+
+//The benefit of using promises, is using "then" if the promise is resolved above, then will fire, if reject is triggered,  the second
+function of the promise will fucntion as an error.
+getPuzzle('1').then((puzzle)=>{
+    console.log(`The puzzle is: ${puzzle}`)
+},(error)=>{
+    console.log(error);
+});
