@@ -1,0 +1,23 @@
+1. Callbacks are good to use as you can specify a call back when calling a function and can either alter the data that is being sent back
+or if an error hits, you can react to that also.
+
+
+//to add a callback in your function, you must declare it in your params when creating the function.
+const getDataCallBack = (callback) => {
+    setTimeout(()=>{
+        //the first param of a callback is always error, so we must set it to undefined. If there is no error, we can return the wanted
+        data from the function. You can think of callback(undefined, data) is the same as being return data; you are returning the data
+        from the function.
+        callback(undefined, 'this is the data');
+    }, 2000);
+};
+
+
+2. Now we call the function we created and react  to the callback
+getDataCallBack((error, data) => {
+    if (error){
+        console.log(error);
+    } else{
+        console.log(data);
+    }
+});
