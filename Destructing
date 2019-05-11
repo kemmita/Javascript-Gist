@@ -1,0 +1,9 @@
+const todo = {
+    text: 'but is num',
+    completed: false
+};
+
+//using the destructing text below, we can create multiple variables using the object above.
+const {text, completed} = todo;
+
+console.log(text, completed);
