@@ -1,0 +1,11 @@
+1. You can see how the for of loop differs from foreach
+
+const numers = ['jane', 'sam', 'k9oe'];
+
+numers.forEach((element, index)=> {
+    console.log(`${element} is index ${index}`);
+});
+
+for (const x of numers){
+    console.log(x);
+}
