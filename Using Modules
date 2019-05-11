@@ -1,0 +1,15 @@
+1. Moduled act as a library in C would act you can create variables or functions and use them in whatever file imports the module. If you 
+want to use modules, you will need to use webpack.
+
+2. utilities.js
+
+export const square = (a) => a*a +3;
+
+export const name = (name) => name;
+
+3. index.js
+
+import {square, name} from './utilities';
+console.log(square(2));
+
+console.log(name('Russ Butt'));
