@@ -1,0 +1,15 @@
+
+
+
+let mySet = new Set();
+
+mySet.add('Bucky');
+mySet.add(12);
+mySet.add({
+    name: 'russ',
+    age: 29
+});
+
+mySet.forEach((element) =>{
+   console.log(element);
+});
