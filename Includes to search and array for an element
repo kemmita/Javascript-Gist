@@ -1,0 +1,4 @@
+const x = [5,3,4,2,5,7,8];
+
+//This will return a true or false.
+console.log(x.includes(9));
