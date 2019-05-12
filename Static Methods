@@ -1,0 +1,24 @@
+1. Static methods can be called from a class without having to create a new object of the class.
+
+class IPhone{
+    constructor(price, brand, weight){
+        this.price = price;
+        this.brand = brand;
+        this.weight = weight;
+    }
+    spiel(){
+        return `${this.brand} costs ${this.price} in 2019.`;
+    }
+    static warranty(){
+        return 'This phone carries a 3 year warranty with purchase.';
+    }
+}
+
+
+// Here we create a new instance of the class above so we can access spiel method we don not need to create a new instance of the 
+class above to call warranty as this method is static
+let p = new IPhone(233, 'IPhoneX', '2.666Kg');
+
+console.log(p.spiel());
+//Below is how we call a static method.
+console.log(IPhone.warranty());
