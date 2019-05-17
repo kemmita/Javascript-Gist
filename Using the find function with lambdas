@@ -1,7 +1,0 @@
-1. The lambda expression will locate and return the fist number that is greater than 6.
-
-const x = [5,3,4,2,5,7,8];
-
-const xGreaterThanSix = x.find(value => value > 6);
-
-console.log(xGreaterThanSix);

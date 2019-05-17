@@ -1,0 +1,15 @@
+1. Using find we can create the exact same datatype as the element we want to locate in the array.
+
+const getNotes = (title) => {
+   //notes is an array
+  const notes = loadNotes();
+  //Below we search the array that is full of objects, if we find the title, only one object will be assigned 
+  // to checkForNote, the object we are looking for
+  const checkForNote = notes.find(note => note.title === title);
+  // if the object was found we will now have access to its properties. 
+  if (checkForNote){
+      console.log(`Title: ${checkForNote.title} Body: ${checkForNote.body}`);
+  } else {
+      console.log(`${title} not found.`);
+  }
+};
