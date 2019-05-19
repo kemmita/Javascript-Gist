@@ -1,0 +1,11 @@
+const product = {
+    label: 'red',
+    price: 3,
+    stock: 201,
+    salePrice: false
+};
+
+// The below code will provide us with label and stock athat can be used within the projcet, the values of these varaibles will
+// be the value assigned above.
+const {label, stock} = product;
+console.log(label, stock);
