@@ -7,5 +7,6 @@ const product = {
 
 // The below code will provide us with label and stock athat can be used within the projcet, the values of these varaibles will
 // be the value assigned above.
-const {label, stock} = product;
+let {label, stock} = product;
+label = 'blue';
 console.log(label, stock);
