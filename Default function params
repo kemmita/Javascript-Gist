@@ -1,0 +1,6 @@
+1. We can define a default value for a param so that if it is not used, we will not get default returned.
+
+// The below code will return user.
+const greet = (name = 'user') => `Hello ${name}`;
+
+console.log(greet());
