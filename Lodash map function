@@ -1,0 +1,5 @@
+1. Using lodash map we can create a new array by targeting and cherry picking another array.
+
+const name = [['MIke', 'Donnly'], ['Sam', 'Chirn']];
+
+console.log(_.map(name, (lname) =>lname[1]));
