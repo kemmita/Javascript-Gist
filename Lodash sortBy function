@@ -1,0 +1,8 @@
+1. Using sortBy. we pass the array as the first param follwed by the row of data we wish to sort by
+numbers = [[1,23],[3,98],[2,33]];
+const sorted = _.sortBy(numbers, (row) => row[1]);
+
+2. If we had a single single row array to sort, we would no supply the second param.
+
+const nummer = [1,5,2,6,7,3];
+console.log(_.sortBy(nummer))
