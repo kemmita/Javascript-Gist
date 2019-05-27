@@ -1,0 +1,4 @@
+1. Using the lodash chain function, we can specify the array and then chain on the functions we wish to perform.
+const numbers = [[1,23],[3,98],[2,33]];
+const preparedData = _.chain(numbers).sortBy(row => row[1]).map(row => row[1]).value();
+console.log(preparedData);
