@@ -12,5 +12,5 @@ live-server
 3. open another termninal and mind your current directory. from there you will need to define your src file and out
 file paths respectivley.
 ```
-babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+babel src/app.js --out-file=public/scripts/app.js
 ```
