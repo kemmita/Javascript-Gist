@@ -1,7 +1,0 @@
-var marker1 = new google.maps.Marker({
-          position: {lat:48.516054, lng:11.481216},
-          map: map,
-          title: "this is compton",
-          draggable: true,
-          animation: google.maps.Animation.DROP
-        });
